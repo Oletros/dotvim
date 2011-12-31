@@ -12,10 +12,7 @@ vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[un
 nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
 vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
 nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
-setlocal keymap=
-setlocal noarabic
 setlocal autoindent
-setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -28,8 +25,6 @@ setlocal colorcolumn=
 setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
 setlocal cryptmethod=
@@ -49,7 +44,7 @@ setlocal foldcolumn=0
 setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
-setlocal foldlevel=0
+setlocal foldlevel=2
 setlocal foldmarker={,}
 setlocal foldmethod=marker
 setlocal foldminlines=1
@@ -71,7 +66,6 @@ setlocal keywordprg=
 setlocal linebreak
 setlocal nolisp
 setlocal list
-setlocal nomacmeta
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -86,8 +80,6 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=4
 setlocal noshortname
@@ -113,12 +105,18 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 139 - ((65 * winheight(0) + 17) / 35)
+34
+normal zo
+55
+normal zo
+34
+normal zo
+let s:l = 56 - ((10 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-139
-normal! 026l
+56
+normal! 02l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
