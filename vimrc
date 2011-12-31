@@ -7,4 +7,4 @@ set autoindent
 set ic
 set hls
 set lbr
-colorscheme deset
+colorscheme desert
