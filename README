@@ -14,3 +14,4 @@ git submodule init
 git submodule update
 
 Original: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+vimrc: https://github.com/spf13/spf13-vim

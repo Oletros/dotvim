@@ -11,7 +11,7 @@ setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
 setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal commentstring=#%s
 setlocal complete=.,w,b,u,t,i
 setlocal completefunc=
 setlocal nocopyindent
@@ -25,8 +25,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != ''
-setlocal filetype=
+if &filetype != 'sh'
+setlocal filetype=sh
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -46,8 +46,8 @@ setlocal iminsert=0
 setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetShIndent()
+setlocal indentkeys=0{,0},!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -81,11 +81,11 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
+if &syntax != 'sh'
+setlocal syntax=sh
 endif
 setlocal tabstop=4
-setlocal tags=~/.vim/.git/tags,./tags,tags
+setlocal tags=~/.vim/spf13/spf13-vim/.git/sh.tags,~/.vim/spf13/spf13-vim/.git/tags,./tags,tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -94,12 +94,12 @@ setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 11) / 22)
+let s:l = 29 - ((21 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 040l
+29
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
