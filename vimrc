@@ -136,3 +136,4 @@
 " }
 
 colorscheme desert
+set guifont=Inconsolata:h18
