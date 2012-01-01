@@ -1,6 +1,6 @@
 # If Condition
 snippet if
-	if (${1:/* condition */})
+	if ${1:/* condition */}
 	begin
 		${2:/* code */}
 	end
@@ -9,6 +9,16 @@ snippet el
 	begin
 		${1}
 	end
+snippet ife
+	if ${1:/* condition */}
+	begin
+		${2:/* code */}
+	end
+	else
+	begin
+		${3:/* code */}
+	end
+# Declaración de variables
 snippet dvi
 	declare @${1:/*variable*/} integer
 snippet dvdt
@@ -17,4 +27,28 @@ snippet dvv
 	declare @${1:/*variable*/} varchar(${2:255})
 snippet dvc
 	declare @${1:/*variable*/} char(1)
+# Declaración de cursor
+snippet dcursor
+	declare ${1:c_cursor} cursor
+	for select ${2:select_clause}
+	for read only
 
+	open $1
+
+	fetch $1 into ${3:variables}
+	
+	while @@sqlcode=0
+	begin
+		${4:code}
+		fetch $1 into $3
+	end
+	
+	close $1
+	deallocate $1
+	
+# Chequeo de errores
+snippet cerror
+	select @sqlrows=@@rows, @errno=@sqlcode
+
+	if @sqlcode<>0 goto error
+	
