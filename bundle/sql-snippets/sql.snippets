@@ -1,0 +1,20 @@
+# If Condition
+snippet if
+	if (${1:/* condition */})
+	begin
+		${2:/* code */}
+	end
+snippet el
+	else
+	begin
+		${1}
+	end
+snippet dvi
+	declare @${1:/*variable*/} integer
+snippet dvdt
+	declare @${1:/*variable*/} datetime
+snippet dvv
+	declare @${1:/*variable*/} varchar(${2:255})
+snippet dvc
+	declare @${1:/*variable*/} char(1)
+
