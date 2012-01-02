@@ -11,6 +11,7 @@
 " Environment {
 	" Basics {
 		set nocompatible 		" must be first line
+        call pathogen#infect()
 		set background=dark     " Assume a dark background
 	" }
 
