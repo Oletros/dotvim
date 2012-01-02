@@ -37,7 +37,7 @@ snippet dcursor
 
 	fetch $1 into ${3:variables}
 	
-	while @@sqlcode=0
+	while @@sqlstatus=0
 	begin
 		${4:code}
 		fetch $1 into $3
@@ -48,7 +48,22 @@ snippet dcursor
 	
 # Chequeo de errores
 snippet cerror
+	select @errno = @@ERROR
+	select @errmsg = 'SQLCODE', @msg = '${1:missatge}'
+
+	execute Sp_coderrtrc 'ERRFILE_99', @errno, @errmsg OUT, 1, @rows_affected
+
+	if @errmsg <> 'OK'
+		goto error
+
 	select @sqlrows=@@rows, @errno=@sqlcode
 
 	if @sqlcode<>0 goto error
 	
+snippet est
+	exec Sp_set_transac_trc '${1:transaccio}'
+snippet bt
+	begin transaction '${1:transaccio}'
+snippet ct
+	commit transaction '${1:transaccio}'
+

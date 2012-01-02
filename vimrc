@@ -127,6 +127,7 @@
 	set nowrap                     	" wrap long lines
 	set autoindent                 	" indent at the same level of the previous line
 	set shiftwidth=4               	" use indents of 4 spaces
+	"set noexpandtab 	  	     	" tabs are tabs, not spaces
 	set expandtab 	  	     		" tabs are spaces, not tabs
 	set tabstop=4 					" an indentation every four columns
 	set softtabstop=4 				" let backspace delete indent
@@ -135,6 +136,7 @@
 	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 	" Remove trailing whitespaces and ^M chars
 	autocmd FileType c,cpp,java,php,js,python,sql,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    set listchars=tab:▸\ ,eol:¬
 " }
 
 " Key (re)Mappings {
@@ -258,5 +260,9 @@ endfunction
 call InitializeDirectories()
 " }
 
-
-
+" Creació de DiffOrig {
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+          \ | wincmd p | diffthis
+endif
+" }
