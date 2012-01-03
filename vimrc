@@ -8,11 +8,17 @@
 "	You can find me at http://spf13.com
 " }
 
+" Cambio de idioma a ingl�s {
+set langmenu=en_US
+let $LANG = 'en_US'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+" }
+
 " Environment {
 	" Basics {
 		set nocompatible 		" must be first line
-        call pathogen#infect()
-		set background=dark     " Assume a dark background
+    	set background=dark     " Assume a dark background
 	" }
 
 	" Windows Compatible {
@@ -21,7 +27,8 @@
 		if has('win32') || has('win64')
 		  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 		endif
-	" }
+        call pathogen#infect()
+		" }
     " 
 	" Setup Bundle Support {
 	" The next two lines ensure that the ~/.vim/bundle/ system works
@@ -137,7 +144,7 @@
 	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
 	" Remove trailing whitespaces and ^M chars
 	autocmd FileType c,cpp,java,php,js,python,sql,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-    set listchars=tab:▸\ ,eol:¬
+    ""set listchars=tab:▸\ ,eol:¬
 " }
 
 " Key (re)Mappings {
