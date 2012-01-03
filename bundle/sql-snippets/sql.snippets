@@ -46,18 +46,15 @@ snippet dcursor
 	close $1
 	deallocate $1
 	
-# Chequeo de errores
+# Chequeo de errores {
 snippet cerror
 	select @errno = @@ERROR
 	select @errmsg = 'SQLCODE', @msg = '${1:missatge}'
 
 	execute Sp_coderrtrc 'ERRFILE_99', @errno, @errmsg OUT, 1, @rows_affected
-
-	if @errmsg <> 'OK'
-		goto error
+	if @errmsg <> 'OK' goto error
 
 	select @sqlrows=@@rows, @errno=@sqlcode
-
 	if @sqlcode<>0 goto error
 	
 snippet est
@@ -66,7 +63,7 @@ snippet bt
 	begin transaction '${1:transaccio}'
 snippet ct
 	commit transaction '${1:transaccio}'
-# Link por peoducto y equipo
+# Link por producto y equipo
 snippet lpe
 	( ${1:a}.id_producto = ${2:b}.id_producto
 	and $1.id_equipo = $2.id_equipo )

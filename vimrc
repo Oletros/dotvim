@@ -238,7 +238,7 @@ source $VIMRUNTIME/menu.vim
 
 " }
 
-" Creació de directoris temporals {
+" Creacio de directoris temporals {
 function! InitializeDirectories()
   let separator = "."
   let parent = $HOME 
@@ -268,9 +268,13 @@ endfunction
 call InitializeDirectories()
 " }
 
-" Creació de DiffOrig {
+" Creacio de DiffOrig {
 if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
           \ | wincmd p | diffthis
 endif
+" }
+
+" Carrega de vimrc local {
+source $HOME/localvimrc
 " }
