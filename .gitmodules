@@ -10,6 +10,3 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "/Users/oletros/.vim/bundle/snipmate"]
-	path = /Users/oletros/.vim/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
