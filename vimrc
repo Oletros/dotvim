@@ -58,7 +58,7 @@ source $VIMRUNTIME/menu.vim
 	set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
 	set virtualedit=onemore 	   	" allow for cursor beyond last character
 	set history=1000  				" Store a ton of history (default is 20)
-	set spell 		 	        	" spell checking on
+	"set spell 		 	        	" spell checking on
 	
 	" Setting up the directories {
 		set backup 						" backups are nice ...

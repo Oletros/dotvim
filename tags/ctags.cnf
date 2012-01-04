@@ -1,0 +1,11 @@
+--langdef=sql
+--langmap=sql:.sql
+--regex-sql=/create[ \t]*table[ \t]*([a-zA-Z0-9_@.#]+)/\1/t,table/i
+--regex-sql=/create[ \t]*procedure[ \t]*([a-zA-Z0-9_]*)/\1/p,procedure/i
+--regex-sql=/^[ \t]*create[ \t]+([a-zA-Z0-9 \t]*)?(function)[ \t]+([^.]+\.)?"?([a-zA-Z0-9_@.]+)/\4/f,function/i
+--regex-sql=/create[ \t]*trigger[ \t]*([a-zA-Z0-9_]*)/\1/T,trigger/i
+--regex-sql=/^[ \t]*create[ \t]+([a-zA-Z0-9 \t]*)?(event)[ \t]+([^.]+\.)?"?([a-zA-Z0-9_@.]+)/\4/e,event/i
+--regex-sql=/create[ \t]*index[ \t]*([a-zA-Z0-9_@.]*)/\1/i,index/i
+--regex-sql=/^[ \t]*create[ \t]+([a-zA-Z0-9 \t]*)?(publication|subscription to|synchronization user)[ \t]+([^.]+\.)?"?([a-zA-Z0-9_@.]+)/\4/m,mobilink/i
+--regex-sql=/^[ \t]*create[ \t]+([a-zA-Z0-9 \t]*)?(variable)[ \t]+([^.]+\.)?"?([a-zA-Z0-9_@.]+)/\4/v,variable/i
+--regex-sql=/^[ \t]*create[ \t]+([a-zA-Z0-9 \t]*)?(rule|schema|server|datatype|database|message)[ \t]+([^.]+\.)?"?([a-zA-Z0-9_@.]+)/\4/o,other/i
