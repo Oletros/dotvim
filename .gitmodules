@@ -29,6 +29,8 @@
 [submodule "bundle/nerdcomment"]
 	path = bundle/nerdcomment
 	url = git://github.com/scrooloose/nerdcommenter.git
+    ignore = dirty
 [submodule "bundle/easymotion"]
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
+    ignore = dirty
