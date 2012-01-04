@@ -16,3 +16,6 @@
 [submodule "bundle/easytags"]
 	path = bundle/easytags
 	url = git://github.com/xolox/vim-easytags.git
+[submodule "bundle/vimshell"]
+	path = bundle/vimshell
+	url = git://github.com/xolox/vim-shell.git
