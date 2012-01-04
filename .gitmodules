@@ -1,21 +1,28 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+    ignore = dirty
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+    ignore = dirty
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+    ignore = dirty
 [submodule "bundle/easytags"]
 	path = bundle/easytags
 	url = git://github.com/xolox/vim-easytags.git
+    ignore = dirty
 [submodule "bundle/vimshell"]
 	path = bundle/vimshell
 	url = git://github.com/xolox/vim-shell.git
+    ignore = dirty
