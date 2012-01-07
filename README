@@ -1,11 +1,18 @@
 Installation:
 
+Create directory:
+mkdir ~/.vim
+mkdir c:\users\user_name\.vim (in Windows 7)
+
 git clone git://github.com/Oletros/dotvim.git
 Create symlinks:
 
-ln -s ~/.vim/vimrc ~/.vimrc (_vimrc in Windows)
-ln -s ~/.vim/gvimrc ~/.gvimrc (_gvimrc in Windows)
-ln -s ~/.vim/tags/ctags.cnf ~/.ctags (ctags.cnf in Windows)
+ln -s ~/.vim/vimrc ~/.vimrc
+mklink c:\users\user_name\_vimrc c:\users\user_name\.vim\vimrc (in Windows 7)
+ln -s ~/.vim/gvimrc ~/.gvimrc
+mklink c:\users\user_name\_gvimrc c:\users\user_name\.vim\gvimrc (in Windows 7)
+ln -s ~/.vim/tags/ctags.cnf ~/.ctags
+mklink c:\users\user_name\ctags.cnf c:\users\user_name\.vim\ctags\ctags.cnf (in Windows 7)
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
