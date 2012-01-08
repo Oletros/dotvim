@@ -34,3 +34,6 @@
 	path = bundle/easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
     ignore = dirty
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
