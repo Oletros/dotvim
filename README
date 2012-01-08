@@ -7,7 +7,7 @@ mkdir c:\users\user_name\.vim (in Windows 7)
 git clone git://github.com/Oletros/dotvim.git
 Create symlinks:
 
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/vimrc ~/.vimrc (para sistemas Unix)
 mklink c:\users\user_name\_vimrc c:\users\user_name\.vim\vimrc (in Windows 7)
 ln -s ~/.vim/gvimrc ~/.gvimrc
 mklink c:\users\user_name\_gvimrc c:\users\user_name\.vim\gvimrc (in Windows 7)
@@ -21,4 +21,4 @@ git submodule init
 git submodule update
 
 Original: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-vimrc: https://github.com/spf13/spf13-vim
+vimrc: https://github.com/spf13/spf13-vim (no se por que no viene como submódulo)
