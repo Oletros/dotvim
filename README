@@ -1,5 +1,14 @@
 Installation:
+1. Install gvim
+2. Install git
+3. Windows: xcopy xcopy [git dir]\bin\libiconv-2.dll libexec\git-core\
+4. copy ssh public key to .ssh
 
+Create directory:
+mkdir ~/.vim
+mkdir c:\users\user_name\.vim (in Windows 7)
+
+git clone git://github.com/O
 Create directory:
 mkdir ~/.vim
 mkdir c:\users\user_name\.vim (in Windows 7)
