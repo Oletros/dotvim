@@ -37,3 +37,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/pydoc"]
+	path = bundle/pydoc
+	url = git://github.com/fs111/pydoc.vim.git

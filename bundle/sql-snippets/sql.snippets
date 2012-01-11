@@ -19,12 +19,16 @@ snippet ife
 		${3:/* code */}
 	end
 # Declaración de variables
+#Integer
 snippet dvi
 	declare @${1:/*variable*/} integer
+#Datetime
 snippet dvdt
 	declare @${1:/*variable*/} datetime
+#Varchar
 snippet dvv
 	declare @${1:/*variable*/} varchar(${2:255})
+#Char
 snippet dvc
 	declare @${1:/*variable*/} char(1)
 # Declaración de cursor
@@ -57,10 +61,13 @@ snippet cerror
 	select @sqlrows=@@rows, @errno=@sqlcode
 	if @sqlcode<>0 goto error
 	
+#Set Transaction
 snippet est
 	exec Sp_set_transac_trc '${1:transaccio}'
+#Begin tran
 snippet bt
 	begin transaction '${1:transaccio}'
+#Commit tran
 snippet ct
 	commit transaction '${1:transaccio}'
 # Link por producto y equipo

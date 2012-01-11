@@ -81,7 +81,7 @@ source $VIMRUNTIME/menu.vim
 
 " Vim UI {
     colorscheme desert
-    set guifont=Inconsolata:h18
+    set guifont=Inconsolata:h14
 	set tabpagemax=15 				" only show 15 tabs
 	set showmode                   	" display the current mode
 
@@ -260,7 +260,7 @@ function! InitializeDirectories()
 		  echo "Warning: Unable to create backup directory: " . directory
 		  echo "Try: mkdir -p " . directory
 	  else  
-          let directory = substitute(directory, " ", "\\\\ ", "")
+          let directory = substitute(directory, " ", "\\\\ ", "g")
           exec "set " . settingname . "=" . directory
 	  endif
   endfor
