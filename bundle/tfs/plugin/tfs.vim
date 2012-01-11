@@ -333,7 +333,7 @@ endfunction
 "
 " TFS Vim Commands
 "
-command! TfCheckout                   :call TfPopup("checkout")
+command! TfCheckout                   :call TfPopup("checkout /lock:checkout")
 command! TfCheckin                    :call TfGetCheckinComments()
 command! TfRevert                     :call TfPopup("undo")
 command! TfStatus                     :call TfBigPopup("status")
