@@ -74,6 +74,11 @@ snippet ct
 snippet lpe
 	( ${1:a}.id_producto = ${2:b}.id_producto
 	and $1.id_equipo = $2.id_equipo )
+# Link por producto, fabricante y modelo
+snippet lpm
+	( ${1:a}.id_producto = ${2:b}.id_producto
+	and $1.id_fabricante = $2.id_fabricante
+	and $1.id_modelo = $2.id_modelo )
 # Link de campos
 snippet lpc
 	${1:a}.${2:campo} = ${3:b}.$2
@@ -89,4 +94,9 @@ snippet tlj
 snippet trj
 	${1:a} right join ${2:b}
 	on $1.${3:campo} = $2.$3
-
+snippet ljb
+	left join ${1:a} on 
+snippet rjb
+	right join ${1:a} on 
+snippet ijb
+	inner join ${1:a} on 

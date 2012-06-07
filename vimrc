@@ -81,7 +81,7 @@ source $VIMRUNTIME/menu.vim
 
 " Vim UI {
     colorscheme desert
-    set guifont=Inconsolata:h14
+    set guifont=Inconsolata:h18
 	set tabpagemax=15 				" only show 15 tabs
 	set showmode                   	" display the current mode
 
