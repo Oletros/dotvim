@@ -52,15 +52,11 @@ snippet dcursor
 	
 # Chequeo de errores {
 snippet cerror
-	select @errno = @@ERROR
-	select @errmsg = 'SQLCODE', @msg = '${1:missatge}'
-
-	execute Sp_coderrtrc 'ERRFILE_99', @errno, @errmsg OUT, 1, @rows_affected
+	select @errno = @@error, @rows_affected = @@rowcount
+	select @errmsg = '${1:missatge}'
+	execute sp_coderrTRC 'ERRFILE_99', @errno, @errmsg out, 1, @rows_affected
 	if @errmsg <> 'OK' goto error
 
-	select @sqlrows=@@rows, @errno=@sqlcode
-	if @sqlcode<>0 goto error
-	
 #Set Transaction
 snippet est
 	exec Sp_set_transac_trc '${1:transaccio}'
